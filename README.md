@@ -1,4 +1,4 @@
-# (ICQ v.98a)[https://www.icq98.xyz]
+# [ICQ v.98a](https://www.icq98.xyz)
 Revive of ICQ98 chatroom project
 
 ---
@@ -11,6 +11,12 @@ To revive ICQ98a with the help of socket.io.
 - [ ] redraw/revectorize icons and fonts
 - [ ] if possible, all sound effects
 - [ ] socket.io rooms and namespaces
+
+## v0.2 May 1, 2018
+Fixing the layout of the ICQ messenger, and adding jQuery event for using the Enter button
+
+### Changed
+- Fixing a good deal of the styling of the messenger
 
 ## v0.1 April 29, 2018
 Note: setting up CSS for the site, mostly dealing with the social login, leaving only Facebook and Google social login strategies left for the social login implementation. Also, there is a need to implement different rooms and namespace for login use. 
