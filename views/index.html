@@ -13,8 +13,8 @@
         <button id = 'send'>Send</button>
     </form> -->
 
-    <div class="container grid seven-three">
-        <section id="chatbox">
+    <div class="container">
+        <section class='greybgc tp-lf-light' id="chatbox">
             <div class="statusbar">
 
 
@@ -34,7 +34,7 @@
                     </button>
                 </div>
             </div>
-            <div class="menubox greyframe">
+            <div class="menubox">
                 <ul id="messages"></ul>
                 <input id="m" autocomplete="off" />
                 <div class="bottomenu">
@@ -47,11 +47,11 @@
 
 
         </section>
-        <section id="namelist">
-            <div class="statusbar">
+        <section class='greybgc tp-lf-light' id="namelist">
+            <div class="statusbar" id='namelist-status'>
                 <div class='status'>
                     <img src="./icons/available.png" alt="online">
-                    <span>142169667</span>
+                    <span class="">142169667</span>
                 </div>
                 <div class='sizingbox'>
                     <button>
@@ -61,6 +61,9 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
+            </div>
+            <div id='listbody' class=''>
+
             </div>
         </section>
 

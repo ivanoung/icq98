@@ -1,6 +1,9 @@
 :root {
   --background-col: #28007e;
   --background: #bfbfbf;
+  --col-black: #111111;
+  --frame-wht: #bbbbbb;
+  --frame-gry: #555555;
 }
 
 * {
@@ -8,43 +11,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font: 13px Helvetica, Arial;
 }
 
-.container{
+/* The outer most layer of the messenger */
+
+.container {
   /* width: 100vw; */
   height: 100vh;
-}
-
-.grid{
   display: grid;
   grid-template-columns: 75% 25%;
+  grid-gap: .3vmin;
+  padding: .2vmin;
 }
 
-.greyframe{
+.greybgc {
   color: black;
   background-color: var(--background);
   width: 100%;
   height: 100%;
-  border: .5vmin solid var(--background);
-
+  padding: 1vmin;
 }
 
-.major-fct::first-letter{
+/* Common sharing elements, non structure related */
+
+.bt-rt-light {
+  border-top: 1px solid var(--frame-gry);
+  border-left: 1px solid var(--frame-gry);
+  border-bottom: 1px solid var(--frame-wht);
+  border-right: 1px solid var(--frame-wht);
+}
+
+.tp-lf-light {
+  border-top: 1px solid var(--frame-wht);
+  border-left: 1px solid var(--frame-wht);
+  border-bottom: 1px solid var(--frame-gry);
+  border-right: 1px solid var(--frame-gry);
+}
+
+.invt-btn {}
+
+.major-fct::first-letter {
   text-decoration: underline;
 }
 
-.statusbar{
+.statusbar {
   padding: 1vmin;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-
-.statusbar {
   color: white;
   background-color: var(--background-col);
+}
+
+/* Structure related styling */
+
+#namelist {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 5% 1fr 7% 7%;
+}
+
+#namelist-status {
+  grid-row: 1/2;
+  grid-column: 1/5;
 }
