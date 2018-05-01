@@ -2,8 +2,8 @@
   --background-col: #28007e;
   --background: #bfbfbf;
   --col-black: #111111;
-  --frame-wht: #bbbbbb;
-  --frame-gry: #555555;
+  --frame-wht: .3vmin solid #eeeeee;
+  --frame-gry: .3vmin solid #555555;
 }
 
 * {
@@ -16,6 +16,18 @@ body {
   font: 13px Helvetica, Arial;
 }
 
+
+/* custom lining */
+hr { 
+  display: inline;
+  width: 80%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
 /* The outer most layer of the messenger */
 
 .container {
@@ -40,20 +52,25 @@ body {
 /* Frame-related design */
 
 .bt-rt-light {
-  border-top: 1px solid var(--frame-gry);
-  border-left: 1px solid var(--frame-gry);
-  border-bottom: 1px solid var(--frame-wht);
-  border-right: 1px solid var(--frame-wht);
+  border-top: var(--frame-gry);
+  border-left: var(--frame-gry);
+  border-bottom: var(--frame-wht);
+  border-right: var(--frame-wht);
 }
 
 .tp-lf-light {
-  border-top: 1px solid var(--frame-wht);
-  border-left: 1px solid var(--frame-wht);
-  border-bottom: 1px solid var(--frame-gry);
-  border-right: 1px solid var(--frame-gry);
+  border-top: var(--frame-wht);
+  border-left: var(--frame-wht);
+  border-bottom: var(--frame-gry);
+  border-right: var(--frame-gry);
 }
 
-.invt-btn {}
+.invt-btn {
+  border-top: var(--frame-gry);
+  border-left: var(--frame-gry);
+  border-bottom: var(--frame-wht);
+  border-right: var(--frame-wht);
+}
 
 /* Text related */
 
@@ -79,10 +96,25 @@ body {
   padding: 1vmin;
 }
 
+.lft-button {
+  display: flex;
+  align-items: center;
+}
+
 /* Sizing */
 
 .hstretch {
   width: 100%;
+}
+
+.cont-cnt {
+  display: flex;
+  justify-content: center;
+}
+
+.cont-lft {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Non-common styling */
@@ -90,9 +122,16 @@ body {
 /* Structure related styling */
 
 #namelist {
+  width: 100%;
+  height: 100%;
   display: grid;
+  grid-row-gap: 1vmin;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 5% 1fr 7% 7%;
+  grid-template-rows: 5% 1fr 5% 5%;
+}
+
+#namelist>div {
+  padding: 0 1vmin;
 }
 
 #namelist-status {
@@ -103,6 +142,15 @@ body {
 #namelist-list {
   grid-row: 2/3;
   grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+}
+
+.namelisting {
+  margin: .5vmin 0;
+  display: flex;
+  align-items: center;
+
 }
 
 #namelist-sysnotice {
@@ -123,4 +171,12 @@ body {
 .bottomenu {
   display: flex;
   justify-content: space-between;
+}
+
+.list-status{
+  display: flex;
+  justify-content: space-evenly;
+}
+.list-status-name{
+  padding: 0 1vmin;
 }
