@@ -15,9 +15,7 @@
 
     <div class="container">
         <section class='greybgc tp-lf-light' id="chatbox">
-            <div class="statusbar">
-
-
+            <div class="statusbar" id='chat-status'>
                 <div class='status'>
                     <img src="./icons/available.png" alt="online">
                     <span>Dr. Mac (Offline) - Message Session</span>
@@ -34,22 +32,27 @@
                     </button>
                 </div>
             </div>
-            <div class="menubox">
+            <div class="invt-btn" id="chat-history">
                 <ul id="messages"></ul>
-                <input id="m" autocomplete="off" />
-                <div class="bottomenu">
-                    <div class="functions">
-                        <button class='major-fct func-but'>Cancle</button>
-                        <button class='func-but'>User Menu</button>
-                        <button class='func-but'>User Details</button>
-                    </div>
-                    <div class="send-status">
-                        <button class='major-fct func-but' id='send'>Send</button>
-                        <img src="./icons/wutface.gif" alt="" class="bt-rt-light">
-                    </div>
+            </div>
+            <div id="chat-menu">
 
+            </div>
+            <input class="chat-area invt-btn" id="m" autocomplete='off'>
 
+            </input>
+            <div id="bottomenu">
+                <div class="functions flex h-cent v-cent">
+                    <button class='major-fct func-but'>Cancle</button>
+                    <button class='func-but'>User Menu</button>
+                    <button class='func-but'>User Details</button>
                 </div>
+                <div class="send-status flex h-cent v-cent">
+                    <button class='major-fct func-but' id='send'>Send</button>
+                    <img src="./icons/wutface.gif" alt="" class="bt-rt-light">
+                </div>
+
+
             </div>
 
 
@@ -108,7 +111,6 @@
                 <img src="./icons/available.png" alt="online">Online</div>
 
         </section>
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js"></script>
