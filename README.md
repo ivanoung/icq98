@@ -1,7 +1,5 @@
 # [ICQ v.98a](https://www.icq98.xyz)
 Revive of ICQ98 chatroom project for public
-
-
 ---
 
 ## Project objective
